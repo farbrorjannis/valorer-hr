@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valörverktyg för Konstnärer – Akvarellskiss</title>
+    <link rel="stylesheet" href="valorer.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Valörverktyg – Hitta rätt toner i din bild</h1>
+        <p class="subtitle">Förenkla din referensbild till få valörer – perfekt för akvarellskisser</p>
+        
+        <div class="upload-section">
+            <label for="imageInput" class="upload-label">
+                📁 Välj en referensbild
+                <input type="file" id="imageInput" accept="image/*">
+            </label>
+        </div>
+        
+        <div class="control-section">
+            <label for="levels">Antal valörer: <span id="levelValue">3</span></label>
+            <input type="range" id="levels" min="2" max="8" value="3" step="1">
+            <p class="tip">💡 Tips: 3 valörer är bäst för att hitta de stora formerna i din målning. 5-8 valörer ger mer detaljer.</p>
+        </div>
+        
+        <!-- Canvas-container med bilden -->
+        <div class="canvas-container">
+            <canvas id="imageCanvas"></canvas>
+        </div>
+        
+        <button id="downloadBtn" style="display: none;">⬇️ Ladda ner valörbild</button>
+        
+        <div class="info-text" style="margin-top: 2rem; padding: 1rem; background: #faf5ec; border-radius: 12px;">
+            <h3>📖 Om valörer</h3>
+            <p>Valörer är ljushetsnivåer i en bild – från mörkaste svart till ljusaste vitt. Genom att förenkla en bild till få valörer ser du tydligare vilka former och kontraster som är viktigast. Perfekt som underlag för akvarellskisser där du vill planera ljusa och mörka partier.</p>
+        </div>
+    </div>
+    
+    <script src="valorer.js"></script>
+</body>
+</html>
