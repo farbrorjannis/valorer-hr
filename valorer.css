@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f0e6 0%, #e8dccc 100%);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    color: #3a2c1b;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 250, 240, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #5e3a1c;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7d5e3a;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.upload-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #b38b5d;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.upload-label:hover {
+    background: #9c7347;
+    transform: translateY(-2px);
+}
+
+.upload-label input {
+    display: none;
+}
+
+.control-section {
+    background: #faf5ec;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border: 1px solid #d4b68a;
+}
+
+.control-section label {
+    font-weight: 600;
+    color: #5e3a1c;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#levels {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.tip {
+    color: #7d5e3a;
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Canvas-container med viktiga CSS-regler för storlek */
+.canvas-container {
+    text-align: center;
+    padding: 1rem;
+    background: #f0e4d2;
+    border-radius: 15px;
+    margin: 2rem 0;
+    min-height: 200px;
+    border: 2px dashed #b38b5d;
+}
+
+/* HÄR ÄR DEN VIKTIGA ÄNDRINGEN */
+#imageCanvas {
+    max-width: 100%;        /* Bredden begränsas av containern */
+    max-height: 80vh;       /* Höjd begränsas till 80% av fönsterhöjden */
+    width: auto;            /* Behåll proportioner */
+    height: auto;           /* Behåll proportioner */
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    background: #ffffff;
+}
+
+#downloadBtn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #5e3a1c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+#downloadBtn:hover {
+    background: #3a2c1b;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    #imageCanvas {
+        max-height: 70vh;    /* Lite mindre på mobil */
+    }
+}
